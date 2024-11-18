@@ -1,0 +1,45 @@
+// Contoh dasar pembuatan objek 3D dengan p5.js
+function setup() {
+  // Membuat canvas 3D
+  createCanvas(600, 600, WEBGL);
+}
+ 
+function draw() {
+  // Mengatur background
+  background(0,255,25);
+ 
+  // Menambahkan pencahayaan
+  directionalLight(255, 255, 255, 0.5, 1, -0.50);
+  ambientLight(600);
+   
+ 
+  // Menambahkan bola 3D
+  push();
+  fill(100, 149, 237);
+  sphere(100); 
+  pop();
+ 
+  
+  // Mengatur rotasi objek berdasarkan waktu
+  rotateY(frameCount * 0.01);
+ 
+  
+  // Menambahkan bola 3D
+  push();
+  translate(150, 10, 137); 
+  fill(255);
+  sphere(20); 
+  
+  
+   // Mengatur rotasi objek berdasarkan waktu
+  rotateZ(frameCount * 0.01);
+ 
+  
+  // Menambahkan bola 3D
+  push();
+  translate(150, 10, 120); 
+  fill(255);
+  sphere(20); 
+  
+}
+
